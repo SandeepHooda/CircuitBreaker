@@ -9,7 +9,7 @@ resilience4j:
         minimumNumberOfCalls: 2
         permittedNumberOfCallsInHalfOpenState: 1
         slidingWindowSize: 10
-        waitDurationInOpenState: 10s
+        waitDurationInOpenState: 120s
         slidingWindowType: COUNT_BASED
 
 management:

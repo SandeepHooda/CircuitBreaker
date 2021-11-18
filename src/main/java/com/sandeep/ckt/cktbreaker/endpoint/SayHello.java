@@ -23,7 +23,7 @@ public class SayHello {
 		String response  = "Downstream service is working fine";
 		if (count > 3) {
 			try {
-				Thread.sleep(10000);
+				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

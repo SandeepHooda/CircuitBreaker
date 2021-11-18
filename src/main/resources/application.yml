@@ -1,0 +1,25 @@
+resilience4j:
+  circuitbreaker:
+    instances:
+      HELLO_SERVICE:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 2
+        permittedNumberOfCallsInHalfOpenState: 1
+        slidingWindowSize: 10
+        waitDurationInOpenState: 60s
+        slidingWindowType: COUNT_BASED
+
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always

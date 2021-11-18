@@ -22,7 +22,12 @@ public class SayHello {
 		RestTemplate restTemplate = new RestTemplate();
 		String response  = "Downstream service is working fine";
 		if (count > 3) {
-			
+			try {
+				Thread.sleep(10000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			response= restTemplate.getForObject("http://localhost:8081/item", String.class);
 		}
         

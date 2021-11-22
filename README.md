@@ -1,5 +1,5 @@
 # CircuitBreaker
-Step 1: launch  https://circuit-breaker-mvn.herokuapp.com/actuator/health. This may take some time becuse it is the first call to the application. On this health page the status will be <b>state":"CLOSED" </b><br/>
+Step 1: launch  https://circuit-breaker-mvn.herokuapp.com/actuator/health/circuitBreakers. This may take some time becuse it is the first call to the application. On this health page the status will be <b>state":"CLOSED" </b><br/>
 Step 2: Hit this page and keep refreshing it again and again https://circuit-breaker-mvn.herokuapp.com/order<br/>
 <b>You will observe: </b><br/>
   &nbsp;&nbsp;&nbsp; First 3 calls will be fast and you will receive mesage "Downstream service is working fine". This is because fault will be induced after third call <br/>

@@ -13,7 +13,8 @@ public class SayHello {
 	
 	private static final String ORDER_SERVICE = "HELLO_SERVICE";
 	 private static int count=0;
-	
+	 
+	//https://resilience4j.readme.io/docs/circuitbreaker#create-and-configure-a-circuitbreaker 
 	@GetMapping("/order")
     @CircuitBreaker(name=ORDER_SERVICE, fallbackMethod = "orderFallback")
     public ResponseEntity<String> createOrder(){

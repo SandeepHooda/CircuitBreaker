@@ -5,7 +5,9 @@ resilience4j:
         registerHealthIndicator: true
         eventConsumerBufferSize: 10
         automaticTransitionFromOpenToHalfOpenEnabled: true
-        failureRateThreshold: 50
+        failureRateThreshold: 70
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 500ms
         minimumNumberOfCalls: 2
         permittedNumberOfCallsInHalfOpenState: 1
         slidingWindowSize: 10
